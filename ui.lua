@@ -22,7 +22,7 @@ invManager.draw = function(object)
 end
 
 -- Draw Exit Button and Text
-invManager.draw = function(object)
+exit.draw = function(object)
     buffer.drawRectangle(object.x, object.y, object.width, object.height, 0xE10000, 0x0, " ")
     buffer.drawText(object.x + 6, object.y + 2, 0x999999, "Exit")
 end
