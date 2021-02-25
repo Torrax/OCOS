@@ -14,7 +14,8 @@ application:addChild(GUI.panel(1, 1, application.width, application.height, 0x99
 -- Draw Taskbar & Utilities
 application:addChild(GUI.panel(1, 1, 165, 5, 0x666666))
 application:addChild(GUI.label(1, 1, 165, 5, 0x999999, "TorUI")):setAlignment(GUI.ALIGNMENT_HORIZONTAL_CENTER, GUI.ALIGNMENT_VERTICAL_CENTER)
-application:addChild(GUI.label(5, 1, 165, 5, 0x000000, (os.date("%H:%M:%S", os.time())))):setAlignment(GUI.ALIGNMENT_HORIZONTAL_LEFT, GUI.ALIGNMENT_VERTICAL_CENTER)
+application:addChild(GUI.panel(3, 2, 14, 3, 0x999999))
+application:addChild(GUI.label(6, 1, 165, 5, 0x000000, (os.date("%H:%M:%S", os.time())))):setAlignment(GUI.ALIGNMENT_HORIZONTAL_LEFT, GUI.ALIGNMENT_VERTICAL_CENTER)
 
 -- Empty Battery
 application:addChild(GUI.panel(147, 2, 10, 3, 0x000000))
