@@ -40,8 +40,38 @@ while true do
     local _, _, x, y = event.pull("touch")
 
     -- Inventory Button
-    if x >= 5 and x <= 40 and y >= 5 and y <= 15 then
+    if x >= 17 and x <= 52 and y >= 11 and y <= 23 then
         shell.execute("/usr/apps/invManager.lua")
+        os.exit()
+    end
+    
+    -- iFace Button
+    if x >= 62 and x <= 97 and y >= 11 and y <= 23 then
+        --shell.execute("/usr/apps/iFace.lua")
+        os.exit()
+    end
+    
+    -- Drone Control Button
+    if x >= 107 and x <= 142 and y >= 11 and y <= 23 then
+        --shell.execute("/usr/apps/droneCtrl.lua")
+        os.exit()
+    end
+    
+    -- Nuclear Control Button
+    if x >= 17 and x <= 52 and y >= 28 and y <= 40 then
+        --shell.execute("/usr/apps/nuclearCtrl.lua")
+        os.exit()
+    end
+    
+    -- Security Control Button
+    if x >= 62 and x <= 97 and y >= 28 and y <= 40 then
+        --shell.execute("/usr/apps/securityCtrl.lua")
+        os.exit()
+    end
+    
+    -- Redstone Control Button
+    if x >= 107 and x <= 142 and y >= 28 and y <= 40 then
+        --shell.execute("/usr/apps/redstoneCtrl.lua")
         os.exit()
     end
     
