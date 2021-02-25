@@ -11,10 +11,20 @@ local application = GUI.application()
 -- Add panel that fits application
 application:addChild(GUI.panel(1, 1, application.width, application.height, 0x999999))
 
--- Add smaller red panel
+-- Draw Taskbar & Utilities
+application:addChild(GUI.panel(1, 1, 165, 5, 0x666666))
+application:addChild(GUI.label(1, 1, 165, 5, 0x999999, "TorUI")):setAlignment(GUI.ALIGNMENT_HORIZONTAL_CENTER, GUI.ALIGNMENT_VERTICAL_CENTER)
+application:addChild(GUI.label(5, 1, 165, 5, 0x000000, (os.date("%H:%M:%S", os.time())))):setAlignment(GUI.ALIGNMENT_HORIZONTAL_LEFT, GUI.ALIGNMENT_VERTICAL_CENTER)
 
-application:addChild(GUI.panel(0, 0, 165, 5, 0x666666))
-application:addChild(GUI.label(0, 0, 165, 5, 0x999999, "TorUI")):setAlignment(GUI.ALIGNMENT_HORIZONTAL_CENTER, GUI.ALIGNMENT_VERTICAL_CENTER)
+-- Empty Battery
+application:addChild(GUI.panel(147, 2, 10, 3, 0x000000))
+application:addChild(GUI.panel(157, 3, 1, 1, 0x999999))
+application:addChild(GUI.panel(147, 2, 10, 3, 0x22DA00))
+application:addChild(GUI.label(147, 2, 10, 3, 0x000000, "99 %")):setAlignment(GUI.ALIGNMENT_HORIZONTAL_CENTER, GUI.ALIGNMENT_VERTICAL_CENTER)
+
+-- Draw Application Buttons
+application:addChild(GUI.panel(1, 160, 164, 4, 0x000000))
+application:addChild(GUI.label(1, 1, 165, 5, 0x999999, "TorUI")):setAlignment(GUI.ALIGNMENT_HORIZONTAL_CENTER, GUI.ALIGNMENT_VERTICAL_CENTER)
 application:addChild(GUI.panel(17, 11, 35, 12, 0x666666))
 application:addChild(GUI.label(17, 11, 35, 12, 0x999999, "Inventory")):setAlignment(GUI.ALIGNMENT_HORIZONTAL_CENTER, GUI.ALIGNMENT_VERTICAL_CENTER)
 application:addChild(GUI.panel(62, 11, 35, 12, 0x666666))
@@ -39,44 +49,50 @@ application:draw(true)
 while true do
     local _, _, x, y = event.pull("touch")
 
+    -- Battery Button
+    if x >= 147 and x <= 156 and y >= 2 and y <= 4 then
+        --shell.execute("/usr/apps/battery.lua")
+        os.exit()
+    end
+    
     -- Inventory Button
-    if x >= 17 and x <= 52 and y >= 11 and y <= 23 then
+    if x >= 17 and x <= 51 and y >= 11 and y <= 22 then
         shell.execute("/usr/apps/invManager.lua")
         os.exit()
     end
     
     -- iFace Button
-    if x >= 62 and x <= 97 and y >= 11 and y <= 23 then
+    if x >= 62 and x <= 96 and y >= 11 and y <= 22 then
         --shell.execute("/usr/apps/iFace.lua")
         os.exit()
     end
     
     -- Drone Control Button
-    if x >= 107 and x <= 142 and y >= 11 and y <= 23 then
+    if x >= 107 and x <= 141 and y >= 11 and y <= 22 then
         --shell.execute("/usr/apps/droneCtrl.lua")
         os.exit()
     end
     
     -- Nuclear Control Button
-    if x >= 17 and x <= 52 and y >= 28 and y <= 40 then
+    if x >= 17 and x <= 51 and y >= 28 and y <= 39 then
         --shell.execute("/usr/apps/nuclearCtrl.lua")
         os.exit()
     end
     
     -- Security Control Button
-    if x >= 62 and x <= 97 and y >= 28 and y <= 40 then
+    if x >= 62 and x <= 96 and y >= 28 and y <= 39 then
         --shell.execute("/usr/apps/securityCtrl.lua")
         os.exit()
     end
     
     -- Redstone Control Button
-    if x >= 107 and x <= 142 and y >= 28 and y <= 40 then
+    if x >= 107 and x <= 141 and y >= 28 and y <= 39 then
         --shell.execute("/usr/apps/redstoneCtrl.lua")
         os.exit()
     end
     
     -- System Button
-    if x >= 145 and x <= 160 and y >= 45 and y <= 50 then
+    if x >= 145 and x <= 159 and y >= 45 and y <= 49 then
         os.exit() 
     end
 
