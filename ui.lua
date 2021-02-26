@@ -1,5 +1,5 @@
 -- Import libraries
-local GUI = require("GUI")
+local GUI = require("gui")
 local buffer = require("doubleBuffering")
 local shell = require("shell")
 local event = require("event")
