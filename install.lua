@@ -11,4 +11,5 @@ shell.execute("wget -fq " .. REPOSITOTY .. "/ui.lua /home/ui.lua")
 --shell.execute("wget -fq " .. REPOSITOTY .. "/ui.lua /autorun.lua")
 
 -- Images
+shell.execute("mkdir /home/images")
 shell.execute("wget -fq " .. REPOSITOTY .. "/images/torUI.lua /home/images/torUI.pic")
