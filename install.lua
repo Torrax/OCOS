@@ -2,7 +2,7 @@ local REPOSITOTY = "https://raw.githubusercontent.com/Torrax/OCOS/main"
 
 local shell = require("shell")
 -- Libraries
-shell.execute("wget -fq " .. REPOSITOTY .. "/libs/image.lua /lib/image.lua")
+shell.execute("wget -fq " .. REPOSITOTY .. "/libs/Image.lua /lib/Image.lua")
 shell.execute("wget -fq " .. REPOSITOTY .. "/libs/doubleBuffering.lua /lib/doubleBuffering.lua")
 shell.execute("wget -fq " .. REPOSITOTY .. "/libs/GUI.lua /lib/GUI.lua")
 
