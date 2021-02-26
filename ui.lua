@@ -1,4 +1,5 @@
 -- Import libraries
+local gui = require("gui")
 local buffer = require("doubleBuffering")
 local shell = require("shell")
 local event = require("event")
@@ -21,15 +22,15 @@ local function drawStatic()
     buffer.drawSemiPixelRectangle( 142, 3, 11, 6, 0x999999)
     
     buffer.drawSemiPixelRectangle( 142, 3, 11, 6, 0x22DA00)
-    buffer.drawText(13, 3, 0x000000, "99 %");
+    buffer.drawText(145, 3, 0x000000, "99 %");
     
     buffer.drawSemiPixelRectangle( 152, 2, 1, 3, 0x000000)
-    buffer.drawSemiPixelRectangle( 152, 7, 1, 3, 0x999999)
+    buffer.drawSemiPixelRectangle( 152, 7, 1, 3, 0x000000)
     buffer.drawSemiPixelRectangle( 153, 4, 1, 4, 0x000000)
     buffer.drawSemiPixelRectangle( 153, 2, 1, 2, 0x666666)
     buffer.drawSemiPixelRectangle( 153, 8, 1, 2, 0x666666)
     
-    -- Draw Application Buttons ************************ Switch to Images
+    -- Draw Application Buttons
     buffer.drawImage(17 , 11, image.load("/home/images/app_Stocker.pic"))   -- Stocker Logo Button
     buffer.drawImage(62 , 11, image.load("/home/images/app_iFace.pic"))   -- iFace Logo Button
     buffer.drawImage(107 , 11, image.load("/home/images/app_securityPanel.pic"))   -- Drone Control Logo Button
@@ -39,7 +40,7 @@ local function drawStatic()
 
     buffer.drawSemiPixelRectangle( 144, 89, 16, 10, 0x000000)
     buffer.drawSemiPixelRectangle( 145, 90, 14, 8, 0x474747)
-    application:addChild(GUI.label(145, 45, 15, 5, 0x999999, "System")):setAlignment(GUI.ALIGNMENT_HORIZONTAL_CENTER, GUI.ALIGNMENT_VERTICAL_CENTER)
+    buffer.drawText(149, 47, 0x000000, "System");
 end
 
 local function drawDynamic()
@@ -50,8 +51,6 @@ drawStatic()
 drawDynamic()
 
 buffer.drawChanges()
-application:draw(true)
-
 --------------------------------------------------------------------------------
 
 -- Touch/Click Checking
