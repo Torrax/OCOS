@@ -26,7 +26,7 @@ application:addChild(GUI.panel(142, 2, 11, 3, 0x000000))  -- Empty
 application:addChild(GUI.panel(142, 2, 11, 3, 0x22DA00))  --Charged
 application:addChild(GUI.panel(152, 2, 1, 1, 0x666666))   --Blocker 1
 application:addChild(GUI.panel(152, 4, 1, 1, 0x666666))   --Blocker 2
-application:addChild(GUI.label(147, 2, 10, 3, 0x000000, "99 %")):setAlignment(GUI.ALIGNMENT_HORIZONTAL_CENTER, GUI.ALIGNMENT_VERTICAL_CENTER)
+application:addChild(GUI.label(142, 2, 10, 3, 0x000000, "99 %")):setAlignment(GUI.ALIGNMENT_HORIZONTAL_CENTER, GUI.ALIGNMENT_VERTICAL_CENTER)
 
 -- Draw Application Buttons
 application:addChild(GUI.panel(1, 160, 164, 4, 0x000000))
