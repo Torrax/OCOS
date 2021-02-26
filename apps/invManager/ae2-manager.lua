@@ -99,9 +99,12 @@ function main()
 
     if err then
         io.stderr:write(err)
+        shell.execute("/home/ui.lua")
         os.exit(1)
     else
+        shell.execute("/home/ui.lua")
         os.exit(0)
+        
     end
 end
 
