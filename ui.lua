@@ -17,17 +17,11 @@ local function drawStatic()
     
     -- Draw Application Buttons ************************ Switch to Images
     buffer.drawImage(17 , 11, image.load("/home/images/app_Stocker.pic"))   -- Stocker Logo Button
-    application:addChild(GUI.label(17, 11, 35, 12, 0x999999, "Inventory")):setAlignment(GUI.ALIGNMENT_HORIZONTAL_CENTER, GUI.ALIGNMENT_VERTICAL_CENTER)
     buffer.drawImage(62 , 11, image.load("/home/images/app_iFace.pic"))   -- iFace Logo Button
-    application:addChild(GUI.label(62, 11, 35, 12, 0x999999, "iFace")):setAlignment(GUI.ALIGNMENT_HORIZONTAL_CENTER, GUI.ALIGNMENT_VERTICAL_CENTER)
     buffer.drawImage(107 , 11, image.load("/home/images/app_securityPanel.pic"))   -- Drone Control Logo Button
-    application:addChild(GUI.label(107, 11, 35, 12, 0x999999, "Drone Control")):setAlignment(GUI.ALIGNMENT_HORIZONTAL_CENTER, GUI.ALIGNMENT_VERTICAL_CENTER)
     buffer.drawImage(17 , 28, image.load("/home/images/app_nuclearController.pic"))   -- Nuclear Control Logo Button
-    application:addChild(GUI.label(17, 28, 35, 12, 0x999999, "Nuclear Control")):setAlignment(GUI.ALIGNMENT_HORIZONTAL_CENTER, GUI.ALIGNMENT_VERTICAL_CENTER)
     buffer.drawImage(62 , 28, image.load("/home/images/app_droneControl.pic"))   -- Security Panel Logo Button
-    application:addChild(GUI.label(62, 28, 35, 12, 0x999999, "Security Control")):setAlignment(GUI.ALIGNMENT_HORIZONTAL_CENTER, GUI.ALIGNMENT_VERTICAL_CENTER)
     buffer.drawImage(107 , 28, image.load("/home/images/app_remoteRedstone.pic"))   -- Remote Redstone Logo Button
-    application:addChild(GUI.label(107, 28, 35, 12, 0x999999, "Redstone Control")):setAlignment(GUI.ALIGNMENT_HORIZONTAL_CENTER, GUI.ALIGNMENT_VERTICAL_CENTER)
     application:addChild(GUI.panel(145, 45, 15, 5, 0xE10000))
     application:addChild(GUI.label(145, 45, 15, 5, 0x999999, "System")):setAlignment(GUI.ALIGNMENT_HORIZONTAL_CENTER, GUI.ALIGNMENT_VERTICAL_CENTER)
 end
