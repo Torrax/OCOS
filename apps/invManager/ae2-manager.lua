@@ -20,6 +20,7 @@
 -- SOFTWARE.
 --
 
+local shell = require('shell')
 local component = require('component')
 local computer = require('computer')
 local coroutine = require('coroutine')
