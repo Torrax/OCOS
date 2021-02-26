@@ -10,7 +10,8 @@ shell.execute("wget -fq " .. REPOSITOTY .. "/lib/gui.lua /lib/gui.lua")
 shell.execute("wget -fq " .. REPOSITOTY .. "/ui.lua /home/ui.lua")
 --shell.execute("wget -fq " .. REPOSITOTY .. "/ui.lua /autorun.lua")
 
-shell.execute("wget -fq " .. REPOSITOTY .. "/apps/invManager/ae2-manager.lua /home/apps/stocker.lua")
+shell.execute("mkdir /home/apps")
+shell.execute("wget -fq " .. REPOSITOTY .. "/apps/stocker/ae2-manager.lua /home/apps/stocker.lua")
 
 -- Images
 shell.execute("mkdir /home/images")
