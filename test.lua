@@ -23,10 +23,10 @@ verticalList:addItem("Controller 3")
 verticalList:addItem("Controller 4")
 
 -- Buttons
-workspace:addChild(GUI.button(40, 15, 15, 3, 0xFFFFFF, 0x555555, 0x22DA00, 0xFFFFFF, "ON")).onTouch = function()
+workspace:addChild(GUI.button(50, 15, 15, 3, 0xFFFFFF, 0x555555, 0x22DA00, 0xFFFFFF, "ON")).onTouch = function()
 	GUI.alert("Front Side ON")
 end
-workspace:addChild(GUI.button(60, 15, 15, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, "OFF")).onTouch = function()
+workspace:addChild(GUI.button(70, 15, 15, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, "OFF")).onTouch = function()
 	GUI.alert("Front Side OFF")
 end
 
