@@ -1,15 +1,15 @@
 -- Libraries
 local shell = require("shell")
 local component = require("component")
-local component = require("gui")
+local GUI = require("gui")
 
 -- Create new workspace
-local workspace = GUI.workspace()
+local workspace = GUI.application()
 
 -- Add panel that fits workspace
-workspace:addChild(GUI.panel(1, 1, workspace.width, workspace.height, 0x262626))
+workspace:addChild(GUI.panel(0, 0, 161, 101, 0x880000))
 -- Add smaller red panel
-workspace:addChild(GUI.panel(10, 10, workspace.width - 20, workspace.height - 20, 0x880000))
+workspace:addChild(GUI.panel(5, 8, 151, 40, 0x262626))
 
 --------------------------------------------------------------------------------
 
