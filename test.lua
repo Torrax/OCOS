@@ -123,6 +123,29 @@ slider.onValueChanged = function()
 	bPower = slider.value
 end
 
+-- All Control
+local notAnimatedButton = workspace:addChild(GUI.button(63, 43, 25, 4, 0x22DA00, 0x4B4B4B, 0x148700, 0x4B4B4B, "ALL ON"))
+notAnimatedButton.animated = false
+notAnimatedButton.onTouch = function()
+	component.redstone.setOutput(sides.north, nPower)
+	component.redstone.setOutput(sides.south, sPower)
+	component.redstone.setOutput(sides.east, ePower)
+	component.redstone.setOutput(sides.west, wPower)
+	component.redstone.setOutput(sides.top, tPower)
+	component.redstone.setOutput(sides.bottom, bPower) computer.beep(750,0.8)
+end
+
+local notAnimatedButton = workspace:addChild(GUI.button(93, 43, 25, 4, 0xE30000, 0x4B4B4B, 0x880000, 0x4B4B4B, "ALL OFF"))
+notAnimatedButton.animated = false
+notAnimatedButton.onTouch = function()
+	component.redstone.setOutput(sides.north, 0)
+	component.redstone.setOutput(sides.south, 0)
+	component.redstone.setOutput(sides.east, 0)
+	component.redstone.setOutput(sides.west, 0)
+	component.redstone.setOutput(sides.top, 0)
+	component.redstone.setOutput(sides.bottom, 0) computer.beep(250,1.2)
+end
+
 --------------------------------------------------------------------------------
 
 -- Get Redstone Devices
