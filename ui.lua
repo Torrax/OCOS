@@ -83,7 +83,7 @@ while true do
     
     -- Nuclear Control Button
     if x >= 17 and x <= 51 and y >= 28 and y <= 39 then
-        shell.execute("/usr/apps/nuclearController.lua")
+        shell.execute("/usr/apps/nuclearControl.lua")
         os.exit()
     end
     
