@@ -12,6 +12,7 @@ shell.execute("wget -fq " .. REPOSITOTY .. "/ui.lua /home/ui.lua")
 
 shell.execute("mkdir /usr/apps")
 shell.execute("wget -fq " .. REPOSITOTY .. "/apps/invManager/ae2-manager.lua /usr/apps/stocker.lua")
+shell.execute("wget -fq " .. REPOSITOTY .. "/apps/nuclearControl/nuclearControl.lua /usr/apps/nuclearControl.lua")
 
 -- Images
 shell.execute("mkdir /home/images")
