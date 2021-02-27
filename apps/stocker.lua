@@ -30,7 +30,7 @@ local serialization = require('serialization')
 local thread = require('thread')
 local tty = require('tty')
 local unicode = require('unicode')
-local GUI = require('GUI')
+local GUI = require('gui')
 -- local inspect = require('inspect')
 
 -- Config --
