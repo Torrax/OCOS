@@ -95,7 +95,7 @@ while true do
     
     -- Redstone Control Button
     if x >= 107 and x <= 141 and y >= 28 and y <= 39 then
-        --shell.execute("/usr/apps/remoteRedstone.lua")
+        shell.execute("/usr/apps/remoteRedstone.lua")
         os.exit()
     end
     
