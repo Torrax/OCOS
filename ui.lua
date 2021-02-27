@@ -59,7 +59,7 @@ while true do
 
     -- Battery Button
     if x >= 147 and x <= 156 and y >= 2 and y <= 4 then
-        --shell.execute("/usr/apps/battery.lua")
+        shell.execute("/usr/apps/battery.lua")
         os.exit()
     end
     
