@@ -174,8 +174,9 @@ function checkInductionMatrix(_, _, x, y)
 end
  
 function checkWriteShell(_, _, x, y)
-  if x >= 84 and x <= 98 and y == 37 then
-    gpu.setBackground(0xD3D3D3)
+--[[
+ if x >= 84 and x <= 98 and y == 37 then
+  gpu.setBackground(0xD3D3D3)
     term.setCursor(84, 37)
     io.write("Write to Shell")
     if event.pull("drop") then
@@ -187,6 +188,7 @@ function checkWriteShell(_, _, x, y)
       shell:close()
     end
   end
+]]--
 end
  
 function checkFissionReactor(_, _, x, y)
