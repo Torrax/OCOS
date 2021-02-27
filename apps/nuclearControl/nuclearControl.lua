@@ -241,9 +241,9 @@ function drawFissionBar()
     term.setCursor(104, 6)
     io.write("\27[32m", "ENERGY STORED:", "\27[37m")
     term.setCursor(104, 8)
-    io.write(round(energyStored, 3), "%")
+    io.write(round(energyStored, 3), "%      ")
     term.setCursor(104, 10)
-    io.write(shrink(fission.getEnergyStored()), " out of ", shrink(fission.getMaxEnergyStored()))
+    io.write(shrink(fission.getEnergyStored()), " out of ", shrink(fission.getMaxEnergyStored(), "     "))
  
     -- Heat Bar
  
@@ -255,9 +255,9 @@ function drawFissionBar()
     term.setCursor(104, 16)
     io.write("\27[31m", "HEAT LEVEL:", "\27[37m")
     term.setCursor(104, 18)
-    io.write(round(heatLevel, 3), "%")
+    io.write(round(heatLevel, 3), "%      ")
     term.setCursor(104, 20)
-    io.write(shrink(fission.getHeatLevel()), " out of ", shrink(fission.getMaxHeatLevel()))
+    io.write(shrink(fission.getHeatLevel()), " out of ", shrink(fission.getMaxHeatLevel(), "     "))
  
     -- Draw Info
  
