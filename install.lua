@@ -5,6 +5,7 @@ local shell = require("shell")
 shell.execute("wget -fq " .. REPOSITOTY .. "/lib/image.lua /lib/image.lua")
 shell.execute("wget -fq " .. REPOSITOTY .. "/lib/doubleBuffering.lua /lib/doubleBuffering.lua")
 shell.execute("wget -fq " .. REPOSITOTY .. "/lib/gui.lua /lib/gui.lua")
+shell.execute("wget -fq " .. REPOSITOTY .. "/lib/forms.lua /lib/forms.lua")
 
 -- Scripts
 shell.execute("wget -fq " .. REPOSITOTY .. "/ui.lua /home/ui.lua")
@@ -16,7 +17,7 @@ shell.execute("wget -fq " .. REPOSITOTY .. "/apps/stocker.lua /usr/apps/stocker.
 shell.execute("wget -fq " .. REPOSITOTY .. "/apps/nuclearControl.lua /usr/apps/nuclearControl.lua")
 --shell.execute("wget -fq " .. REPOSITOTY .. "/apps/droneControl.lua /usr/apps/droneControl.lua")
 --shell.execute("wget -fq " .. REPOSITOTY .. "/apps/securityPanel.lua /usr/apps/securityPanel.lua")
---shell.execute("wget -fq " .. REPOSITOTY .. "/apps/remoteRedstone.lua /usr/apps/remoteRedstone.lua")
+shell.execute("wget -fq " .. REPOSITOTY .. "/apps/remoteRedstone.lua /usr/apps/remoteRedstone.lua")
 shell.execute("wget -fq " .. REPOSITOTY .. "/apps/battery.lua /usr/apps/battery.lua")
 
 -- Images
