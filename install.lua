@@ -9,7 +9,9 @@ shell.execute("wget -fq " .. REPOSITOTY .. "/lib/forms.lua /lib/forms.lua")
 
 -- Scripts
 shell.execute("wget -fq " .. REPOSITOTY .. "/ui.lua /home/ui.lua")
---shell.execute("wget -fq " .. REPOSITOTY .. "/ui.lua /autorun.lua")
+--local boot = io.open(".shrc", "w")
+--boot:write("/home/ui.lua")
+--boot:close()
 
 shell.execute("mkdir /usr/apps")
 shell.execute("wget -fq " .. REPOSITOTY .. "/apps/stocker.lua /usr/apps/stocker.lua")
