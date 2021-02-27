@@ -1,4 +1,5 @@
 -- Import libraries
+local component = require("component")
 local gui = require("gui")
 local buffer = require("doubleBuffering")
 local shell = require("shell")
@@ -57,6 +58,10 @@ buffer.drawChanges()
 while true do
     local _, _, x, y = event.pull("touch")
 
+    if x and y then
+        buffer.clear()
+        buffer.drawChanges()
+        component.gpu.setForeground(0xFFFFFF)
     -- Battery Button
     if x >= 142 and x <= 153 and y >= 2 and y <= 4 then
         shell.execute("/usr/apps/battery.lua")
@@ -103,4 +108,5 @@ while true do
     if x >= 145 and x <= 159 and y >= 45 and y <= 49 then
         os.exit() 
     end
+end
 end
