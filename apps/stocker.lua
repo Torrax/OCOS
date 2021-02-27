@@ -44,7 +44,7 @@ local maxBatch = 64
 local fullCheckInterval = 10        -- full scan
 local craftingCheckInterval = 1     -- only check ongoing crafting
 -- Where to save the config
-local configPath = '/usr/apps/configs/stocker.cfg'
+local configPath = '/usr/apps/stocker.cfg'
 
 -- Global State --
 
