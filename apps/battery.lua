@@ -1,9 +1,5 @@
---[[ this based in code from Nonsanity https://www.youtube.com/user/Nonsanity. mosty using the GUI!
-	The code was edited and changed by jennifer cally "ebony" 
---]]
-
-
-local component = require( "component" )
+local shell = require("shell")
+local component = require("component")
 local gpu = component.gpu
 local event = require( "event" )
  
@@ -135,3 +131,4 @@ end
 ::quit::
 gpu.setResolution( oldW, oldH )
 clearScreen()
+shell.execute("/home/ui.lua")
