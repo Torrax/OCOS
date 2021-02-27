@@ -17,7 +17,7 @@ shell.execute("wget -fq " .. REPOSITOTY .. "/apps/nuclearControl.lua /usr/apps/n
 --shell.execute("wget -fq " .. REPOSITOTY .. "/apps/droneControl.lua /usr/apps/droneControl.lua")
 --shell.execute("wget -fq " .. REPOSITOTY .. "/apps/securityPanel.lua /usr/apps/securityPanel.lua")
 --shell.execute("wget -fq " .. REPOSITOTY .. "/apps/remoteRedstone.lua /usr/apps/remoteRedstone.lua")
-
+shell.execute("wget -fq " .. REPOSITOTY .. "/apps/battery.lua /usr/apps/battery.lua")
 
 -- Images
 shell.execute("mkdir /home/images")
