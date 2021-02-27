@@ -58,7 +58,7 @@ while true do
     local _, _, x, y = event.pull("touch")
 
     -- Battery Button
-    if x >= 147 and x <= 156 and y >= 2 and y <= 4 then
+    if x >= 142 and x <= 153 and y >= 2 and y <= 4 then
         shell.execute("/usr/apps/battery.lua")
         os.exit()
     end
@@ -83,7 +83,7 @@ while true do
     
     -- Nuclear Control Button
     if x >= 17 and x <= 51 and y >= 28 and y <= 39 then
-        --shell.execute("/usr/apps/nuclearController.lua")
+        shell.execute("/usr/apps/nuclearController.lua")
         os.exit()
     end
     
