@@ -33,13 +33,19 @@ workspace:addChild(GUI.label(60, 32, 15, 3, 0x4B4B4B, "Top")):setAlignment(GUI.A
 workspace:addChild(GUI.panel(110, 32, 15, 3, 0xE1E1E1))
 workspace:addChild(GUI.label(110, 32, 15, 3, 0x4B4B4B, "Bottom")):setAlignment(GUI.ALIGNMENT_HORIZONTAL_CENTER, GUI.ALIGNMENT_VERTICAL_CENTER)
 
+-- Quit Button
+local notAnimatedButton = workspace:addChild(GUI.button(132, 2, 25, 3, 0xAAAAAA, 0x4B4B4B, 0xE1E1E1, 0x4B4B4B, "Exit"))
+notAnimatedButton.animated = false
+notAnimatedButton.onTouch = function()
+	shell.execute("/home/ui.lua")
+        os.close()
+end
+
 -- Controller List
 local verticalList = workspace:addChild(GUI.list(10, 13, 25, 30, 3, 0, 0xE1E1E1, 0x4B4B4B, 0xD2D2D2, 0x4B4B4B, 0x3366CC, 0xFFFFFF, false))
 verticalList:addItem("Controller 1")
 verticalList:addItem("Controller 2").onTouch = function()
-	GUI.alert("Controller Selected " .. verticalList.selectedItem)
-	--shell.execute("/home/ui.lua")
-        os.close()
+	GUI.alert("Controller Selected " .. verticalList.selectedItem) --FUNCTION
 end
 verticalList:addItem("Controller 3")
 verticalList:addItem("Controller 4")
