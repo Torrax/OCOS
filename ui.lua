@@ -78,7 +78,7 @@ while true do
 
         -- iFace Button
         if x >= 62 and x <= 96 and y >= 11 and y <= 22 then
-            --shell.execute("/usr/apps/iFace.lua")
+            shell.execute("/usr/apps/iFace.lua")
             os.exit()
         end
 
