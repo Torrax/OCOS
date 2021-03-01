@@ -15,7 +15,7 @@ shell.execute("wget -fq " .. REPOSITOTY .. "/ui.lua /home/ui.lua")
 
 shell.execute("mkdir /usr/apps")
 shell.execute("wget -fq " .. REPOSITOTY .. "/apps/stocker.lua /usr/apps/stocker.lua")
---shell.execute("wget -fq " .. REPOSITOTY .. "/apps/iFace.lua /usr/apps/iFace.lua")
+shell.execute("wget -fq " .. REPOSITOTY .. "/apps/iFace.lua /usr/apps/iFace.lua")
 shell.execute("wget -fq " .. REPOSITOTY .. "/apps/nuclearControl.lua /usr/apps/nuclearControl.lua")
 --shell.execute("wget -fq " .. REPOSITOTY .. "/apps/droneControl.lua /usr/apps/droneControl.lua")
 --shell.execute("wget -fq " .. REPOSITOTY .. "/apps/securityPanel.lua /usr/apps/securityPanel.lua")
