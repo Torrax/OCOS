@@ -7,11 +7,14 @@ while true do
     if output[1].data == "Kd3J97s3DkRyi28D2" then
       print ("Access Granted: ")
       print (output[1].name)
+      component.redstone.setOutput(sides.north, 1)
       component.os_rolldoorcontroller.open()
     else
+      component.redstone.setOutput(sides.north, 0)
       component.os_rolldoorcontroller.close()
     end  
   else
+    component.redstone.setOutput(sides.north, 0)
     component.os_rolldoorcontroller.close()
   end
 end
